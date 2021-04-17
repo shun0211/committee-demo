@@ -1,0 +1,26 @@
+openapi: 3.0.0
+info:
+  title: Sample API
+  version: 0.1.0
+paths:
+  '/books':
+    get:
+      response:
+        '200':
+          description: ok
+          content:
+            'application/json':
+              schema:
+                type: object
+                properties:
+                  books:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                        title:
+                          type: string
+                        publisher:
+                          type: string
