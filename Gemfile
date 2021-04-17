@@ -24,8 +24,8 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'pry-rails'
-  gem 'committee'
-  gem 'committee-rails'
+  gem 'committee', '4.3.0'
+  gem 'committee-rails', '0.5.1'
 end
 
 group :test do

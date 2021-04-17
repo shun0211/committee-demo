@@ -5,7 +5,7 @@ info:
 paths:
   '/books':
     get:
-      response:
+      responses:
         '200':
           description: ok
           content:
@@ -16,11 +16,36 @@ paths:
                   books:
                     type: array
                     items:
-                      type: object
-                      properties:
-                        id:
-                          type: integer
-                        title:
-                          type: string
-                        publisher:
-                          type: string
+                      allOf:
+                        - $ref: '#/components/schemas/ModelBase'
+                        - type: object
+                          properties:
+                            title:
+                              type: string
+                            publisher:
+                              $ref: '#/components/schemas/Publisher'
+                          required:
+                            - id
+                            - title
+                            - publisher
+                          additionalProperties: false
+components:
+  schemas:
+    Publisher:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+      required:
+        - id
+        - name
+      additionalProperties: false
+    ModelBase:
+      type: object
+      properties:
+        id:
+          type: integer
+      required: [id]
+      additionalProperties: false

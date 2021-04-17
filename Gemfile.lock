@@ -191,8 +191,8 @@ PLATFORMS
 DEPENDENCIES
   bootsnap (>= 1.4.4)
   byebug
-  committee
-  committee-rails
+  committee (= 4.3.0)
+  committee-rails (= 0.5.1)
   jbuilder (~> 2.7)
   listen (~> 3.3)
   pry-rails
