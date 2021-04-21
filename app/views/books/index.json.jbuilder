@@ -2,9 +2,10 @@ json.set! :books do
   json.array! @books do |book|
     json.id book.id
     json.title book.title
-    json.set! :publisher do
-      json.id book.publisher.id
-      json.name book.publisher.name
+    json.set! :authors do
+      json.array! book.authors do |author|
+        json.name author.name
+      end
     end
   end
 end

@@ -26,10 +26,11 @@ group :development, :test do
   gem 'pry-rails'
   gem 'committee', '4.3.0'
   gem 'committee-rails', '0.5.1'
+  gem 'factory_bot_rails'
+  gem 'rspec-rails', '~> 4.0.0'
 end
 
 group :test do
-  gem 'rspec-rails', '~> 4.0.0'
 end
 
 group :development do

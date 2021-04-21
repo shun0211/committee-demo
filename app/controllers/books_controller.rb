@@ -11,7 +11,7 @@ class BooksController < ApplicationController
 
   # GET /books/1
   def show
-    render json: @book
+    render format: :json, status: :ok
   end
 
   # POST /books
